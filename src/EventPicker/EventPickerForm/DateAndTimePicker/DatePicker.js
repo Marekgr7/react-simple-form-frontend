@@ -44,9 +44,10 @@ const Picker = () => {
     <>
       <SimpleInputLabel labelText={messages[language].formDateLabel} />
       <DatePicker
-        selected={new Date(eventDate.value)}
+        selected={eventDate.value ? new Date(eventDate.value) : null}
         onChange={handleChooseEventDate}
         showTimeSelect
+        placeholderText={messages[language].formDatePlaceholder}
       />
       <ChosenDateInfo />
     </>

@@ -7,7 +7,7 @@ export const eventPickerFormFields = {
   date: "date",
 };
 
-const initialState = {
+export const initialState = {
   form: {
     firstName: {
       value: "",
@@ -25,7 +25,7 @@ const initialState = {
       showErrorMessage: false,
     },
     date: {
-      value: new Date().toString(),
+      value: null,
       isValid: false,
       showErrorMessage: false,
     },

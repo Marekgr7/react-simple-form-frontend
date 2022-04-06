@@ -12,4 +12,14 @@ const store = configureStore({
   devtools: true,
 });
 
+export function getStoreWithState(preloadedState) {
+  return configureStore({
+    reducer: {
+      eventPicker: eventPickerReducer,
+      [api.reducerPath]: api.reducer,
+    },
+    preloadedState,
+  });
+}
+
 export default store;

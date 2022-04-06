@@ -13,7 +13,7 @@ import FormSubmitButton from "../../shared/components/FormSubmitButton";
 import {
   validateEventPickerFormField,
   isFormValid,
-} from "./EventPickerFormValidators";
+} from "./eventPickerFormValidators";
 import DateAndTimePicker from "./DateAndTimePicker/DateAndTimePicker";
 
 const Form = styled.form`
@@ -53,6 +53,7 @@ const EventPickerForm = ({ handleFormSubmit }) => {
         errorMessage={messages[language].formFirstNameValidationMessage}
         onBlurHandler={handleCheckIfShouldShowValidationMessage}
         isValid={form.firstName.isValid}
+        inputType="text"
       />
       <InputWithLabel
         value={form.lastName.value}
@@ -64,6 +65,7 @@ const EventPickerForm = ({ handleFormSubmit }) => {
         errorMessage={messages[language].formLastNameValidationMessage}
         onBlurHandler={handleCheckIfShouldShowValidationMessage}
         isValid={form.lastName.isValid}
+        inputType="text"
       />
       <InputWithLabel
         value={form.email.value}
@@ -75,6 +77,7 @@ const EventPickerForm = ({ handleFormSubmit }) => {
         errorMessage={messages[language].formEmailValidationMessage}
         onBlurHandler={handleCheckIfShouldShowValidationMessage}
         isValid={form.email.isValid}
+        inputType="email"
       />
       <DateAndTimePicker />
       <FormSubmitButton

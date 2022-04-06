@@ -9,12 +9,10 @@ export const validateEventPickerFormField = (field, value) => {
       return isNameValid(value);
     case eventPickerFormFields.email:
       return isEmailValid(value);
-    default:
-      return false;
   }
 };
 
-const isNameValid = (name = "") => {
+export const isNameValid = (name = "") => {
   return name.length > 0 && !name.includes(" ");
 };
 

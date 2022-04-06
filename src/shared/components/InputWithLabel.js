@@ -26,6 +26,7 @@ const InputWithLabel = ({
   showErrorMessage,
   onBlurHandler,
   isValid,
+  inputType,
 }) => {
   const changeHandler = useCallback(
     (event) => {
@@ -36,7 +37,7 @@ const InputWithLabel = ({
 
   const blurHandler = useCallback(() => {
     onBlurHandler(field, isValid);
-  }, [onBlurHandler, isValid]);
+  }, [onBlurHandler, isValid, field]);
 
   return (
     <Wrapper>
@@ -46,6 +47,7 @@ const InputWithLabel = ({
         onChange={changeHandler}
         placeholder={placeholder}
         onBlur={blurHandler}
+        type={inputType || "text"}
       />
       <SimpleErrorMessage
         errorMessage={errorMessage}

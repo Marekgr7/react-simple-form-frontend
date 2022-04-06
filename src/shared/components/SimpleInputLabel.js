@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Text = styled.div`
+const Text = styled.label`
   font-size: 14px;
   font-weight: 700;
 `;
