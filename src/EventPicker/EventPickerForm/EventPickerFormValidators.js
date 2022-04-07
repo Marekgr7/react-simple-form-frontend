@@ -9,6 +9,8 @@ export const validateEventPickerFormField = (field, value) => {
       return isNameValid(value);
     case eventPickerFormFields.email:
       return isEmailValid(value);
+    default:
+      return false;
   }
 };
 
